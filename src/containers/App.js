@@ -5,7 +5,8 @@ import { connect } from 'react-redux';
 import 'bootstrap/dist/css/bootstrap.css';
 import Home from './routes/Home';
 import About from './routes/About';
-import Nav from '../components/common/Nav';
+import Login from './routes/Login';
+import Nav from '../components/Nav';
 
 import './App.css';
 
@@ -22,6 +23,7 @@ const App = ({ auth }) => (
 
       <Route exact path="/" component={Home} />
       <Route exact path="/about" component={About} />
+      <Route exact path="/login" component={Login} />
 
     </div>
 

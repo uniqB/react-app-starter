@@ -9,7 +9,7 @@ module.exports = (req, res, next) => {
       return res.send({ token: 'fakedToken' });
     }
     res.status(400);
-    return res.send({ error: 'User or password invalid' });
+    return setTimeout(() => res.send({ errorMessage: 'User and password are invalid.' }), 1000);
   }
   const token = req.header.Authorization;
   if (req.header.Authorization) {
