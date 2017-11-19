@@ -6,6 +6,7 @@ You can find the most recent version of this guide [here](https://github.com/fac
 ## Table of Contents
 
 - [Install](#install)
+- [Run](#run)
 - [Folder Structure](#folder-structure)
 - [Available Scripts](#available-scripts)
   - [npm start](#npm-start)
@@ -17,28 +18,19 @@ You can find the most recent version of this guide [here](https://github.com/fac
 - [Custom Environment Variables](#custom-environment-variables)
 
 ## Install
+* Install react app `npm install`
+* Install mock server `cd mock-server` then `npm install`
 
-Create React App is divided into two packages:
-
-* `create-react-app` is a global command-line utility that you use to create new projects.
-* `react-scripts` is a development dependency in the generated projects (including this one).
-
-You almost never need to update `create-react-app` itself: it delegates all the setup to `react-scripts`.
-
-When you run `create-react-app`, it always creates the project with the latest version of `react-scripts` so you’ll get all the new features and improvements in newly created apps automatically.
-
-To update an existing project to a new version of `react-scripts`, [open the changelog](https://github.com/facebookincubator/create-react-app/blob/master/CHANGELOG.md), find the version you’re currently on (check `package.json` in this folder if you’re not sure), and apply the migration instructions for the newer versions.
-
-In most cases bumping the `react-scripts` version in `package.json` and running `npm install` in this folder should be enough, but it’s good to consult the [changelog](https://github.com/facebookincubator/create-react-app/blob/master/CHANGELOG.md) for potential breaking changes.
-
-We commit to keeping the breaking changes minimal so you can upgrade `react-scripts` painlessly.
+## Run
+* Run web app `npm start`
+* For demo of login and fetching server data you need to run the mock server `cd mock-server` then `npm start`
 
 ## Folder Structure
 
 After creation, your project should look like this:
 
 ```
-my-app/
+react-app-stater/
   README.md
   node_modules/
   package.json
@@ -46,12 +38,16 @@ my-app/
     index.html
     favicon.ico
   src/
-    App.css
-    App.js
-    App.test.js
-    index.css
+    actions
+    assets
+    components
+    containers
+      routes
+      App.js
+    reducers
+    store
+    utils
     index.js
-    logo.svg
 ```
 
 For the project to build, **these files must exist with exact filenames**:
@@ -61,14 +57,16 @@ For the project to build, **these files must exist with exact filenames**:
 
 You can delete or rename the other files.
 
-You may create subdirectories inside `src`. For faster rebuilds, only files inside `src` are processed by Webpack.<br>
+You may create subdirectories inside `src`. For faster rebuilds, only files inside `src` are processed by Webpack.
+
 You need to **put any JS and CSS files inside `src`**, otherwise Webpack won’t see them.
 
-Only files inside `public` can be used from `public/index.html`.<br>
-Read instructions below for using assets from JavaScript and HTML.
+Only files inside `public` can be used from `public/index.html`.
 
-You can, however, create more top-level directories.<br>
-They will not be included in the production build so you can use them for things like documentation.
+`components` folder: presentation components should be here.
+`containers` folder: container components should be placed here.
+
+A great article about presentation and container components is [here](https://medium.com/@dan_abramov/smart-and-dumb-components-7ca2f9a7c7d0).
 
 ## Available Scripts
 
