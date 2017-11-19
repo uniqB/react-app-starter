@@ -1,10 +1,7 @@
 This project was bootstrapped with [Create React App](https://github.com/facebookincubator/create-react-app).
 
-Below you will find some information on how to perform common tasks.<br>
-You can find the most recent version of this guide [here](https://github.com/facebookincubator/create-react-app/blob/master/packages/react-scripts/template/README.md).
-
 ## Table of Contents
-
+- [What is this?](#what-is-this)
 - [Install](#install)
 - [Run](#run)
 - [Folder Structure](#folder-structure)
@@ -16,6 +13,26 @@ You can find the most recent version of this guide [here](https://github.com/fac
   - [npm run build:staging](#npm-run-build-staging)
   - [npm run build:production](#npm-run-build-production)
 - [Custom Environment Variables](#custom-environment-variables)
+
+## What is this?
+This project is simple, clean boilerplate to start a real world React web app.
+
+This includes:
+* [react]()
+* [redux](https://github.com/reactjs/redux)
+* [react-router-dom](https://github.com/ReactTraining/react-router/tree/master/packages/react-router-dom)
+* [react-router-router](https://github.com/reactjs/react-router-redux)
+
+And more:
+* Styling with [bootstrap](https://github.com/twbs/bootstrap)
+* Fetching data from server with [axios](https://github.com/axios/axios)
+* Dependencies injection async client
+* Redux middleware
+
+Coming soon: for high performance and scalable web app
+* [immutable](https://github.com/facebook/immutable-js/)
+* [reselect](https://github.com/reactjs/reselect)
+* [redux-saga](https://github.com/redux-saga/redux-saga)
 
 ## Install
 * Install react app `npm install`
