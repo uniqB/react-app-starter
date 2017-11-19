@@ -15,7 +15,7 @@ This project was bootstrapped with [Create React App](https://github.com/faceboo
 - [Custom Environment Variables](#custom-environment-variables)
 
 ## What is this?
-This project is simple, clean boilerplate to start a real world React web app.
+This project is a simple, clean boilerplate to start a real world React web app.
 
 This includes:
 * [react]()
@@ -81,6 +81,7 @@ You need to **put any JS and CSS files inside `src`**, otherwise Webpack won’t
 Only files inside `public` can be used from `public/index.html`.
 
 `components` folder: presentation components should be here.
+
 `containers` folder: container components should be placed here.
 
 A great article about presentation and container components is [here](https://medium.com/@dan_abramov/smart-and-dumb-components-7ca2f9a7c7d0).
