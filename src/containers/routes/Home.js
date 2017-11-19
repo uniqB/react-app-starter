@@ -1,6 +1,4 @@
 import React from 'react';
-// import PropTypes from 'prop-types';
-import { connect } from 'react-redux';
 
 // By setting NODE_PATH=src in .env we can import with asboluted path
 import logo from 'assets/logo.svg'; // eslint-disable-line
@@ -10,8 +8,10 @@ const Home = () => (
     <div className="jumbotron">
       <img src={logo} style={{ width: '200px' }} alt="logo" />
       <h1>The Modern React</h1>
-      <p className="lead">This simple boilerplate includes: react, redux, react-router, react-redux-router, immutable, reselect.</p>
-      <p><a className="btn btn-lg btn-success" href="#" role="button">Sign up today</a></p>
+      <p className="lead">This simple boilerplate includes: react, redux, react-router, react-redux-router, aixos, <span className="text-warning">immutable, reselect (comming soon)</span>.</p>
+      <p>
+        <iframe title="Github" src="https://ghbtns.com/github-btn.html?user=onlyB&repo=react-app-starter&type=star&count=true&size=large" frameBorder="0" scrolling="0" width="160px" height="30px" />
+      </p>
     </div>
 
     <div className="row marketing">
@@ -23,18 +23,12 @@ const Home = () => (
         }
         </p>
       </div>
-
       <div className="col-lg-6">
-        <h4 />
-        <p>Donec id elit non mi porta gravida at eget metus. Maecenas faucibus mollis interdum.</p>
+        <h4>Mock server</h4>
+        <p>You need to run the mock server to see demo of login and posts fetching.</p>
       </div>
     </div>
   </div>
 );
 
-// Home.propTypes = {
-//   greatingMessage: PropTypes.node.isRequired,
-// };
-
-// export default Home;
-export default connect(() => ({}))(Home);
+export default Home;

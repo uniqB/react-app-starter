@@ -1,9 +1,6 @@
 {
     "posts": [
-      { "id": 1, "title": "json-server", "author": "typicode" }
-    ],
-    "comments": [
-      { "id": 1, "body": "some comment", "postId": 1 }
-    ],
-    "profile": { "name": "typicode" }
+      { "id": 1, "title": "Hello world!", "content": "Donec id elit non mi porta gravida at eget metus. Maecenas faucibus mollis interdum." },
+      { "id": 2, "title": "Hello world again!", "content": "Donec id elit non mi porta gravida at eget metus. Maecenas faucibus mollis interdum." }
+    ]
 }

@@ -1,6 +1,6 @@
 import React from 'react';
 import PropTypes from 'prop-types';
-
+import Error from './Error';
 
 class LoginForm extends React.Component {
   handleSubmit = (e) => {
@@ -24,9 +24,7 @@ class LoginForm extends React.Component {
     }
     return (
       <form>
-        {error &&
-          <div className="alert alert-danger" role="alert">{error.errorMessage}</div>
-        }
+        {error && <Error error={error} />}
         <div className="form-group">
           <label>Username</label>
           <input type="user" className="form-control" ref={(input) => { this.user = input; }} placeholder="Username" />
@@ -34,6 +32,7 @@ class LoginForm extends React.Component {
         <div className="form-group">
           <label>Password</label>
           <input type="password" className="form-control" ref={(input) => { this.pass = input; }} placeholder="Password" />
+          <p className="help-block">Input the password sames to the user to login.</p>
         </div>
         <button type="submit" className="btn btn-primary" onClick={this.handleSubmit} disabled={loading} >Login</button>
       </form>

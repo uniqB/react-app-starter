@@ -4,7 +4,7 @@ import { withRouter, Route } from 'react-router-dom';
 import { connect } from 'react-redux';
 import 'bootstrap/dist/css/bootstrap.css';
 import Home from './routes/Home';
-import About from './routes/About';
+import Post from './routes/Post';
 import Login from './routes/Login';
 import Nav from '../components/Nav';
 
@@ -22,13 +22,13 @@ const App = ({ auth }) => (
     <div className="main-content">
 
       <Route exact path="/" component={Home} />
-      <Route exact path="/about" component={About} />
+      <Route exact path="/posts" component={Post} />
       <Route exact path="/login" component={Login} />
 
     </div>
 
     <footer className="footer">
-      <p>&copy; 2016 Company, Inc.</p>
+      <p>&copy; 2017 <a href="https://github.com/onlyB">@onlyB</a></p>
     </footer>
 
   </div>
@@ -38,7 +38,7 @@ App.propTypes = {
   auth: PropTypes.object.isRequired,
 };
 
-const mapStateToProps = ({ app, auth }) => ({ app, auth });
+const mapStateToProps = ({ auth }) => ({ auth });
 
 // This module is connected with redux, so we need withRouter() decorator for route working
 export default withRouter(connect(mapStateToProps)(App));

@@ -14,8 +14,7 @@
     "react-router-redux": "^5.0.0-alpha.8",
     "react-scripts": "1.0.17",
     "redux": "^3.7.2",
-    "redux-logger": "^3.0.6",
-    "redux-thunk": "^2.2.0"
+    "redux-logger": "^3.0.6"
   },
   "scripts": {
     "start": "react-scripts start",
@@ -28,7 +27,6 @@
   },
   "devDependencies": {
     "eslint-config-airbnb": "^16.1.0",
-    "eslint-plugin-jsx-a11y": "^6.0.2",
-    "redux-logger": "^3.0.6"
+    "eslint-plugin-jsx-a11y": "^6.0.2"
   }
 }

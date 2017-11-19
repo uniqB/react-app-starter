@@ -23,5 +23,4 @@ const mapDispatchToProps = dispatch => ({
   doLogout: () => dispatch(logout()),
 });
 
-// This module is connected with redux, so we need withRouter() decorator for route working
 export default connect(mapStateToProps, mapDispatchToProps)(Login);
