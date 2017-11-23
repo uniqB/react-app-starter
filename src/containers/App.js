@@ -9,6 +9,7 @@ import Home from './routes/Home';
 import Post from './routes/Post';
 import Login from './routes/Login';
 import Nav from '../components/Nav';
+import Toastr from '../components/Toastr';
 import './App.css';
 
 // for using jQuery
@@ -18,6 +19,7 @@ require('bootstrap');
 const App = ({ auth }) => (
 
   <div className="container">
+    <Toastr positionClass="toast-top-center" />
     <div className="header clearfix">
       <Nav {...auth} />
 
@@ -25,11 +27,9 @@ const App = ({ auth }) => (
     </div>
 
     <div className="main-content">
-
       <Route exact path="/" component={Home} />
       <Route exact path="/posts" component={Post} />
       <Route exact path="/login" component={Login} />
-
     </div>
 
     <footer className="footer">

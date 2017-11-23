@@ -1,5 +1,6 @@
 import React from 'react';
 import Modal from '../../components/Modal';
+
 // By setting NODE_PATH=src in .env we can import with asboluted path
 import logo from 'assets/logo.svg'; // eslint-disable-line
 

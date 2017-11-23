@@ -6,7 +6,7 @@ const Error = ({ error }) => (
 );
 
 Error.propTypes = {
-  error: PropTypes.object.isRequired,
+  error: PropTypes.any.isRequired,
 };
 
 export default Error;

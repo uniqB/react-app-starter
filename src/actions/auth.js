@@ -1,3 +1,5 @@
+import { setMsg } from './message';
+
 export const LOGIN = 'LOGIN';
 export const LOGIN_SUCCESS = 'LOGIN_SUCCESS';
 export const LOGIN_FAILURE = 'LOGIN_FAILURE';
@@ -29,8 +31,9 @@ export function login(data) {
         client.setAuthorizationHeader(`Bearer ${response.data.token}`);
         dispatch(loginSuccess(response.data));
       }).catch((error) => {
-        const err = error.response ? error.response.data : error.message;
+        const err = (error.response && error.response.data) || error.message;
         dispatch(loginFailure(err));
+        dispatch(setMsg({ type: 'error', content: err.errorMessage || err }));
       });
     },
   };

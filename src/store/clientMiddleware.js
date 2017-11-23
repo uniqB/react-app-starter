@@ -16,7 +16,19 @@ export default client => ({ dispatch, getState }) => next => (action) => {
         next({ type: SUCCESS, payload: response.data });
       }).catch((error) => {
         // Dispatch async request failure action
-        next({ type: FAILURE, payload: (error.response && error.response.data) || error.message });
+        const err = (error.response && error.response.data) || error.message;
+        next({ type: FAILURE, payload: err });
+        // show failure message
+        next({
+          type: 'SET_TOAST_MSG',
+          payload: {
+            type: 'error',
+            content: {
+              title: 'Error',
+              content: JSON.stringify(err),
+            },
+          },
+        });
       });
     }
     // Action manually handle success/failure async request result
