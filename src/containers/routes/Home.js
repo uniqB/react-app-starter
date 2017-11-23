@@ -1,5 +1,5 @@
 import React from 'react';
-
+import Modal from '../../components/Modal';
 // By setting NODE_PATH=src in .env we can import with asboluted path
 import logo from 'assets/logo.svg'; // eslint-disable-line
 
@@ -26,6 +26,7 @@ const Home = () => (
       <div className="col-lg-6">
         <h4>Mock server</h4>
         <p>You need to run the mock server to see demo of login and posts fetching.</p>
+        <Modal title="Hello" content="Hello world" />
       </div>
     </div>
   </div>

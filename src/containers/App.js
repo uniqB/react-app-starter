@@ -2,13 +2,18 @@ import React from 'react';
 import PropTypes from 'prop-types';
 import { withRouter, Route } from 'react-router-dom';
 import { connect } from 'react-redux';
+import $ from 'jquery';
 import 'bootstrap/dist/css/bootstrap.css';
+
 import Home from './routes/Home';
 import Post from './routes/Post';
 import Login from './routes/Login';
 import Nav from '../components/Nav';
-
 import './App.css';
+
+// for using jQuery
+window.jQuery = window.$ = $;
+require('bootstrap');
 
 const App = ({ auth }) => (
 
