@@ -8,6 +8,20 @@
         "jsx-a11y/label-has-for": 0,
         "react/require-default-props": 0,
         "jsx-a11y/interactive-supports-focus": 0,
-        "jsx-a11y/click-events-have-key-events": 0
+        "jsx-a11y/click-events-have-key-events": 0,
+        "import/no-unresolved": ["error", {
+            "ignore": [
+              "config",
+              "components",
+              "containers",
+              "stores",
+              "actions",
+              "assets",
+              "routes",
+              "utils"
+            ]
+        }],
+        "import/no-extraneous-dependencies": 0,
+        "import/extensions": 0
     }
 }

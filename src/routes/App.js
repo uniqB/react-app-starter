@@ -3,10 +3,10 @@ import PropTypes from 'prop-types';
 import { withRouter, Route } from 'react-router-dom';
 import { connect } from 'react-redux';
 import 'bootstrap/dist/css/bootstrap.css';
-import Home from './routes/Home';
-import Post from './routes/Post';
-import Login from './routes/Login';
-import Nav from '../components/Nav';
+import Nav from 'components/Nav';
+import Home from './Home';
+import Post from './Post';
+import Login from './Login';
 
 import './App.css';
 

@@ -2,8 +2,8 @@ import React from 'react';
 import PropTypes from 'prop-types';
 import { connect } from 'react-redux';
 
-import LoginForm from '../../components/LoginForm';
-import { login, logout } from '../../actions/auth';
+import LoginForm from 'components/LoginForm';
+import { login, logout } from 'actions/auth';
 
 const Login = ({ auth, doLogin, doLogout }) => (
   <div style={{ width: '400px', margin: '0 auto 40px' }}>
