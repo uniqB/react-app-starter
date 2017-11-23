@@ -1,6 +1,6 @@
 import React from 'react';
 import PropTypes from 'prop-types';
-import Error from './Error';
+import { Error } from '../Common';
 
 class LoginForm extends React.Component {
   handleSubmit = (e) => {

@@ -1,8 +1,8 @@
 import axios from 'axios';
-
+import { apiBaseURL } from './config';
 // Set config defaults when creating the instance
 const client = axios.create({
-  baseURL: process.env.REACT_APP_API_URL,
+  baseURL: apiBaseURL,
 });
 
 client.setAuthorizationHeader = (authorization) => {

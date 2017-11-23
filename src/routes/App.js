@@ -3,7 +3,7 @@ import PropTypes from 'prop-types';
 import { withRouter, Route } from 'react-router-dom';
 import { connect } from 'react-redux';
 import 'bootstrap/dist/css/bootstrap.css';
-import Nav from 'components/Nav';
+import { Nav, Footer } from 'components/Layout';
 import Home from './Home';
 import Post from './Post';
 import Login from './Login';
@@ -15,7 +15,6 @@ const App = ({ auth }) => (
   <div className="container">
     <div className="header clearfix">
       <Nav {...auth} />
-
       <h3 className="text-muted">React App Starter</h3>
     </div>
 
@@ -27,9 +26,7 @@ const App = ({ auth }) => (
 
     </div>
 
-    <footer className="footer">
-      <p>&copy; 2017 <a href="https://github.com/onlyB">@onlyB</a></p>
-    </footer>
+    <Footer />
 
   </div>
 );

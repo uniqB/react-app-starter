@@ -2,7 +2,7 @@ import React from 'react';
 import PropTypes from 'prop-types';
 import { connect } from 'react-redux';
 
-import LoginForm from 'components/LoginForm';
+import { LoginForm } from 'components/Login';
 import { login, logout } from 'actions/auth';
 
 const Login = ({ auth, doLogin, doLogout }) => (

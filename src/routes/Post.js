@@ -2,9 +2,8 @@ import React from 'react';
 import PropTypes from 'prop-types';
 import { connect } from 'react-redux';
 import { fetchPosts } from 'actions/post';
-import ListPosts from 'components/ListPosts';
-import Loading from 'components/Loading';
-import Error from 'components/Error';
+import { ListPosts } from 'components/Post';
+import { Loading, Error } from 'components/Common';
 
 class Post extends React.Component {
   componentDidMount() {
